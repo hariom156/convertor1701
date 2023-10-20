@@ -12,11 +12,12 @@
 </head>
 <body>
     <div class="tool-container">
+        <h1><?php echo (isset($title)) ? $title : "";?></h1>
                 <div id="lengthInput" class="tool-container-feild-group">
             <div class="tool-container-feild">
                 <div class="tool-input-group">
                     <div class="tool-input-label">
-                        <label for="fromUnit" id="from-lbl">From:</label>
+                        <label for="fromUnit" id="from-lbl" style="font-weight: bold;">From:</label>
                     </div>
                     <select class="tool-select-group" id="fromUnit" hidden="hidden">
                         <option selected value="Millimeter">Millimeter</option>
@@ -34,7 +35,7 @@
                 
                 <div class="tool-input-group">
                     <div class="tool-input-label">
-                        <label for="toUnit" id="to-lbl">To:</label>
+                        <label for="toUnit" id="to-lbl" style="font-weight: bold;">To:</label>
                     </div>
                     <select class="tool-select-group" id="toUnit" hidden="hidden">
                         <option value="Millimeter">Millimeter</option>
@@ -84,6 +85,12 @@
                     <p><b>Formula:</b> <span id="lengthFormula"></span></p>
                 </div>
             </div>
+        </div>
+        <div style="padding-top: 26px;">
+            <?php echo isset($descriptionFrom) ? $descriptionFrom : "";?>
+        </div>
+        <div style="padding-top: 26px;">
+            <?php echo isset($descriptionTo) ? $descriptionTo : "";?>
         </div>
     </div>
     <script>
